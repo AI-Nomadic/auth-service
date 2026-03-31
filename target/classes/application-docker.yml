@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres-db:5432/auth_db
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:admin}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+
+app:
+  jwt:
+    secret: ${JWT_SECRET}
+    expiration-ms: 604800000
+  google:
+    client-id: ${GOOGLE_CLIENT_ID}
